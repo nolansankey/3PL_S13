@@ -106,7 +106,7 @@
         let payouts_data = await fetch(payoutsSheetLink)    
           .then((response) => response.json());
         var table = document.getElementById("payouts-table");
-        var season_weeks = 6;
+        var season_weeks = 5;
         var places = 3
         for (let i = 0; i < season_weeks; i++) {
             var row1 = table.insertRow(places*i+1);
@@ -147,7 +147,7 @@
         let earnings_data = await fetch(earningsSheetLink)    
           .then((response) => response.json());
         var table = document.getElementById("earnings-table");
-        var num_players = 35;
+        var num_players = 32;
         for (let i = 0; i < num_players; i++) {
             var row1 = table.insertRow(i+1);
             var player_cell = row1.insertCell(0);
