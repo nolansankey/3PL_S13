@@ -113,7 +113,7 @@
     async function names_data_fetch(){
         let login_sheet_data = await fetch(loginSheetLink)    
           .then((response) => response.json());
-        var num_pw = 44;
+        var num_pw = 32;
         for (let k = 0; k < num_pw; k++){
             var name_option = login_sheet_data.values[1+k][0];
             var user_pw = login_sheet_data.values[1+k][1];
@@ -131,7 +131,7 @@
 </script>
 
 <script>
-    var registration_window = true;
+    var registration_window = false;
     if(registration_window) {
         document.getElementById('login').style.display = 'block';
         document.getElementById('register').style.display = 'block';
